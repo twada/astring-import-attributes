@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import { strict as assert } from 'node:assert';
-import { generate, GENERATOR } from 'astring';
+import * as astring from 'astring';
 import { Parser } from 'acorn';
 import { importAttributes as acornImportAttributes } from 'acorn-import-attributes';
 import { astringImportAttributes } from '../astring-import-attributes.mjs';
@@ -16,8 +16,8 @@ test('generate import attributes', () => {
   }) as unknown as Node;
 
   // act
-  const customGenerator = astringImportAttributes(GENERATOR);
-  const generatedCode = generate(ast, {
+  const customGenerator = astringImportAttributes(astring.GENERATOR);
+  const generatedCode = astring.generate(ast, {
     generator: customGenerator
   });
 
