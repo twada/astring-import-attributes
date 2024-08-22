@@ -1,0 +1,46 @@
+{
+  "name": "astring-import-attributes",
+  "version": "0.0.0",
+  "description": "import attributes support for astring",
+  "author": {
+    "name": "Takuto WADA",
+    "email": "takuto.wada@gmail.com",
+    "url": "https://github.com/twada"
+  },
+  "license": "MIT",
+  "keywords": [
+    "astring",
+    "ast",
+    "estree"
+  ],
+  "type": "module",
+  "main": "./dist/astring-import-attributes.mjs",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/astring-import-attributes.d.mts",
+        "default": "./dist/astring-import-attributes.mjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "clean": "rimraf dist && rimraf .tsimp && rm -f tsconfig.tsbuildinfo && rm -rf tmp",
+    "build": "tsc --build",
+    "rebuild": "npm run clean && npm run build",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "test": "node --import tsimp/import --test ./src/__tests__/*.test.mts"
+  },
+  "devDependencies": {
+    "@types/estree": "^1.0.5",
+    "acorn": "^8.12.1",
+    "acorn-import-attributes": "^1.9.5",
+    "astring": "^1.8.6",
+    "eslint": "^9.9.0",
+    "neostandard": "^0.11.3",
+    "rimraf": "^6.0.1",
+    "tsimp": "^2.0.11",
+    "typescript": "^5.5.4"
+  }
+}
