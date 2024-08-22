@@ -7,6 +7,12 @@
     "email": "takuto.wada@gmail.com",
     "url": "https://github.com/twada"
   },
+  "homepage": "https://github.com/twada/astring-import-attributes",
+  "bugs": "https://github.com/twada/astring-import-attributes/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twada/astring-import-attributes.git"
+  },
   "license": "MIT",
   "keywords": [
     "astring",
@@ -24,6 +30,14 @@
     },
     "./package.json": "./package.json"
   },
+  "files": [
+    "src",
+    "dist",
+    "!**/__tests__",
+    "CHANGELOG.md",
+    "README.md",
+    "package.json"
+  ],
   "scripts": {
     "clean": "rimraf dist && rimraf .tsimp && rm -f tsconfig.tsbuildinfo && rm -rf tmp",
     "build": "tsc --build",
