@@ -34,12 +34,14 @@
   },
   "devDependencies": {
     "@types/estree": "^1.0.5",
+    "@types/node": "^22.5.0",
     "acorn": "^8.12.1",
     "acorn-import-attributes": "^1.9.5",
     "astring": "^1.8.6",
     "eslint": "^9.9.0",
     "neostandard": "^0.11.3",
     "rimraf": "^6.0.1",
+    "source-map": "^0.7.4",
     "tsimp": "^2.0.11",
     "typescript": "^5.5.4"
   }
