@@ -1,6 +1,6 @@
 {
   "name": "astring-import-attributes",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "import attributes support for astring",
   "author": {
     "name": "Takuto WADA",
